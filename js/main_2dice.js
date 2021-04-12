@@ -2,7 +2,6 @@ let scores;
 let roundScore;
 let activePlayer;
 let gamePlaying;
-let lastDice;
 
 // init function
 function init() {
@@ -55,8 +54,8 @@ document.querySelector('.btn-roll').addEventListener('click', () => {
     // 2. Display the result
     document.getElementById('dice-1').style.display = 'block';
     document.getElementById('dice-2').style.display = 'block';
-    document.getElementById('dice-1').src = 'img/dice-' + dice1 + '.png';
-    document.getElementById('dice-2').src = 'img/dice-' + dice2 + '.png';
+    document.getElementById('dice-1').src = `img/dice-${dice1}.png`;
+    document.getElementById('dice-2').src = `img/dice-${dice2}.png`;
 
     // 3. Update the round score IF the rolled number was NOT a 1
     if (dice1 !== 1 && dice2 !== 1) {
@@ -78,12 +77,10 @@ document.querySelector('.btn-hold').addEventListener('click', () => {
 
     // Update the UI
     document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer];
-    let input = document.querySelector('.final-score').value
+    const input = document.querySelector('.final-score').value;
     let winningScore;
-    if (input)
-      winningScore = input;
-    else
-      winningScore = 20;
+    if (input) winningScore = input;
+    else winningScore = 20;
 
 
     // Check if player won the game

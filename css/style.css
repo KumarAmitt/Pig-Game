@@ -28,6 +28,18 @@
   text-transform: uppercase;
 }
 
+.final-score:focus {
+  outline: none;
+}
+
+#dice-1 {
+  top: 120px;
+}
+
+#dice-2 {
+  top: 250px;
+}
+
 body {
   background: linear-gradient(to right top, rgba(62, 20, 20, 0.7), rgba(62, 20, 20, 0.4)) center;
   font-family: Lato, sans-serif;

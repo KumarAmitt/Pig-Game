@@ -1,5 +1,7 @@
 # Pig-Game
 
+![screenshot](./img/scr.png)
+
 ### Game Rules:
 
 - The game has 2 players, playing in rounds
